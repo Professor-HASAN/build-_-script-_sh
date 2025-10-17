@@ -22,7 +22,7 @@ dirs_to_remove=(
 rm -rf "${dirs_to_remove[@]}"
 
 echo "=== Cloning device trees ==="
-git clone https://github.com/Professor-HASAN/android_device_xiaomi_munch -b inf device/xiaomi/munch
+git clone https://github.com/Professor-HASAN/android_device_xiaomi_munch -b cherish device/xiaomi/munch
 git clone https://github.com/Professor-HASAN/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-next kernel/xiaomi/munch
 git clone https://github.com/Professor-HASAN/android_hardware_xiaomi

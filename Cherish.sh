@@ -25,7 +25,7 @@ echo "=== Cloning device trees ==="
 git clone https://github.com/Professor-HASAN/android_device_xiaomi_munch -b cherish device/xiaomi/munch
 git clone https://github.com/Professor-HASAN/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-next kernel/xiaomi/munch
-git clone https://github.com/Professor-HASAN/android_hardware_xiaomi
+git clone https://github.com/Professor-HASAN/android_hardware_xiaomi hardware/xiaomi
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings -b aosp-16 packages/resources/devicesettings

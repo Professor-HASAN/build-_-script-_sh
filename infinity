@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# Infinity OS Android 16 Build Script
+# Infinity OS Android 16 NikGApps Build Script
 # Author: Professor-HASAN
 # Device: munch (POCO F4)
 #
@@ -23,8 +23,6 @@ fi
 echo "==> Cleaning old outputs and device/vendor/hardware trees..."
 dirs_to_remove=(
     out/target/product/munch
-    out/target/product/gapps
-    out/target/product/vanilla
     device/xiaomi/munch
     kernel/xiaomi/munch
     vendor/xiaomi/munch
@@ -46,16 +44,9 @@ git clone https://github.com/Professor-HASAN/hardware_dolby -b a16 hardware/dolb
 git clone https://github.com/Professor-HASAN/packages_resources_devicesettings -b a16 packages/resources/devicesettings
 git clone https://github.com/Professor-HASAN/vendor_xiaomi_miuicamera -b a16 vendor/xiaomi/miuicamera
 
-echo "=== Starting GMS (Pico) build ==="
+echo "=== Starting NikGApps build ==="
 . build/envsetup.sh
 lunch infinity_munch-user
-m bacon_gms_pico
-mv out/target/product/munch out/target/product/gapps
+m bacon_gms_nikgapps
 
-echo "=== Starting Vanilla (AOSP) build ==="
-. build/envsetup.sh
-lunch infinity_munch-user
-m bacon_vanilla
-mv out/target/product/munch out/target/product/vanilla
-
-echo "=== All builds completed successfully! ==="
+echo "=== Infinity OS NikGApps build completed successfully! ==="
